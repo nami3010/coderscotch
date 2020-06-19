@@ -1,0 +1,21 @@
+<form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+      User:
+      <select class="custom-select" (change)="changeUser($event)" formControlName="User">
+        <option value=""></option>
+        <option *ngFor="let username of userName" [ngValue]="username">{{username}}</option>
+      </select>
+    </label>
+  
+    <label>
+      Title:
+      <input type="text" formControlName="Title">
+    </label>
+
+    <label>
+        Body:
+        <input type="text" formControlName="Body">
+      </label>
+    <button type="submit" [disabled]="!articleForm.valid">Submit</button>
+  </form>

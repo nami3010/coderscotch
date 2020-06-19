@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <h5>Article Details</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body" >
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Article Id</label>
+                  <br/>
+                  <input type="text"  disabled="true" value="{{articleid}}" />
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Title</label>
+                  <br/>
+                  <textarea  disabled="true" value="{{title}}"></textarea>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Body</label>
+                  <br/>
+                  <textarea disabled="true" value="{{body}}"></textarea>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Posted By</label>
+                  <br/>
+                  <input type="text"  disabled="true" value="{{username}}" />
+                </div>
+              </div>
+        </div>
+        
+    </form>
+</div>
